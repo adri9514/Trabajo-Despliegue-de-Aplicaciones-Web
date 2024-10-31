@@ -12,3 +12,7 @@ COPY ./nginx.conf /etc/nginx/nginx.conf
 # Exponemos los puertos necesarios para PHP y Nginx
 EXPOSE 80
 EXPOSE 9000
+
+COPY ./start.sh /start.sh
+RUN chmod +x /start.sh
+CMD ["/start.sh"]
